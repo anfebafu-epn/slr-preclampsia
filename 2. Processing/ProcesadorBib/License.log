@@ -1,0 +1,23 @@
+    ======  ======
+    Time:17/3/2026 15:31:38
+    Title: Initiate log
+    Message: 
+    Time:17/3/2026 15:31:38
+    Title: Initiate InternalManager
+    Message: Trying to Validate License
+    Time:17/3/2026 15:31:38
+    Title: Requesting EVT
+    Message: EVTP
+    Time:17/3/2026 15:31:38
+    Title: Requesting Validation
+    Message: ILMValidate
+    Time:17/3/2026 15:31:39
+    Title: LICENSER - TALN
+    Message: Start
+    Time:17/3/2026 15:31:40
+    Title: LICENSER - TALN
+    Message: Invalid username and/or password.
+    Entering constructor for: Telerik.CommonPackage.VSPackage
+    Entering Initialize() of: Telerik.CommonPackage.VSPackage
+    ResolveFWLinkAccountManager statusCode is redirect: 'True'
+    ResolveFWLinkAccountManager resovled fwlink from 'https://go.microsoft.com/fwlink/?LinkID=415837' to 'https://app.vssps.visualstudio.com/'

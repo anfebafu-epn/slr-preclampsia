@@ -437,7 +437,7 @@ namespace ProcesadorBib
                     var tokencount = encoding.Encode("{role:user,content:" + prompt + "}").Count;
 
                     // API privado de Smartwork
-                    string ApiKey = "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";
+                    string ApiKey = "sk-proj-XXXX";
 
                     WebClient client = new WebClient();
                     client.Headers.Add("Authorization", "Bearer " + ApiKey);
@@ -542,7 +542,7 @@ namespace ProcesadorBib
                     var tokencount = encoding.Encode("{role:user,content:" + prompt + "}").Count;
 
                     // API privado de Smartwork
-                    string ApiKey = "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";
+                    string ApiKey = "sk-proj-XXXX";
 
                     WebClient client = new WebClient();
                     client.Headers.Add("Authorization", "Bearer " + ApiKey);
@@ -629,7 +629,7 @@ namespace ProcesadorBib
                     var tokencount = encoding.Encode("{role:user,content:" + prompt + "}").Count;
 
                     // API privado de Smartwork
-                    string ApiKey = "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";
+                    string ApiKey = "sk-proj-XXXXX";
 
                     WebClient client = new WebClient();
                     client.Headers.Add("Authorization", "Bearer " + ApiKey);
@@ -716,7 +716,7 @@ namespace ProcesadorBib
                     var tokencount = encoding.Encode("{role:user,content:" + prompt + "}").Count;
 
                     // API privado de Smartwork
-                    string ApiKey = "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";
+                    string ApiKey = "sk-proj-XXXX";
 
                     WebClient client = new WebClient();
                     client.Headers.Add("Authorization", "Bearer " + ApiKey);
@@ -803,7 +803,7 @@ namespace ProcesadorBib
                     var tokencount = encoding.Encode("{role:user,content:" + prompt + "}").Count;
 
                     // API privado de Smartwork
-                    string ApiKey = "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";
+                    string ApiKey = "sk-proj-XXXXX";
 
                     WebClient client = new WebClient();
                     client.Headers.Add("Authorization", "Bearer " + ApiKey);
@@ -890,7 +890,7 @@ namespace ProcesadorBib
                     var tokencount = encoding.Encode("{role:user,content:" + prompt + "}").Count;
 
                     // API privado de Smartwork
-                    string ApiKey = "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";
+                    string ApiKey = "sk-proj-XXXX";
 
                     WebClient client = new WebClient();
                     client.Headers.Add("Authorization", "Bearer " + ApiKey);
@@ -1781,7 +1781,7 @@ namespace ProcesadorBib
         private static void chatGPT_Process_Run()
         {
             // Config OpenAI            
-            string apiKey = "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";
+            string apiKey = "sk-proj-XXXXX";
 
             // Cliente del API (lib oficial)
             var chatClient = new ChatClient(model: "gpt-5", apiKey: apiKey); // puedes cambiar modelo
