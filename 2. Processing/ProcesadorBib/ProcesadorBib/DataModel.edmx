@@ -1,0 +1,962 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DOC_TmpModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Author">
+          <Key>
+            <PropertyRef Name="AuthorID" />
+          </Key>
+          <Property Name="AuthorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="given" Type="varchar" MaxLength="250" />
+          <Property Name="family" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="BibEntry">
+          <Key>
+            <PropertyRef Name="EntryID" />
+          </Key>
+          <Property Name="EntryID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EntryType" Type="varchar" MaxLength="8000" />
+          <Property Name="EntryKey" Type="varchar" MaxLength="8000" />
+          <Property Name="abstract" Type="varchar" MaxLength="8000" />
+          <Property Name="annote" Type="varchar" MaxLength="8000" />
+          <Property Name="booktitle" Type="varchar" MaxLength="8000" />
+          <Property Name="ISBN" Type="varchar" MaxLength="8000" />
+          <Property Name="publisher" Type="varchar" MaxLength="8000" />
+          <Property Name="title" Type="varchar" MaxLength="8000" />
+          <Property Name="url" Type="varchar" MaxLength="8000" />
+          <Property Name="year" Type="varchar" MaxLength="8000" />
+          <Property Name="doi" Type="varchar" MaxLength="8000" />
+          <Property Name="ISSN" Type="varchar" MaxLength="8000" />
+          <Property Name="volume" Type="varchar" MaxLength="8000" />
+          <Property Name="author" Type="varchar" MaxLength="8000" />
+          <Property Name="keywords" Type="varchar" MaxLength="8000" />
+          <Property Name="pages" Type="varchar" MaxLength="8000" />
+          <Property Name="month" Type="varchar" MaxLength="8000" />
+          <Property Name="journal" Type="varchar" MaxLength="8000" />
+          <Property Name="number" Type="varchar" MaxLength="8000" />
+          <Property Name="address" Type="varchar" MaxLength="8000" />
+          <Property Name="editor" Type="varchar" MaxLength="8000" />
+          <Property Name="archivePrefix" Type="varchar" MaxLength="8000" />
+          <Property Name="arxivId" Type="varchar" MaxLength="8000" />
+          <Property Name="eprint" Type="varchar" MaxLength="8000" />
+          <Property Name="series" Type="varchar" MaxLength="8000" />
+          <Property Name="db" Type="varchar" MaxLength="1000" />
+          <Property Name="edition" Type="varchar" MaxLength="1000" />
+          <Property Name="day" Type="varchar" MaxLength="100" />
+          <Property Name="note" Type="varchar" MaxLength="1000" />
+          <Property Name="EntryStatus" Type="int" />
+          <Property Name="jsondata" Type="varchar(max)" />
+          <Property Name="indexed" Type="datetime" />
+          <Property Name="publishedprint" Type="datetime" />
+          <Property Name="articletype" Type="varchar" MaxLength="250" />
+          <Property Name="created" Type="datetime" />
+          <Property Name="score" Type="int" />
+          <Property Name="issued" Type="datetime" />
+          <Property Name="published" Type="datetime" />
+          <Property Name="isreferencedbycount" Type="int" />
+          <Property Name="cISSN" Type="varchar" MaxLength="100" />
+          <Property Name="cISBN" Type="varchar" MaxLength="100" />
+          <Property Name="containertitle" Type="varchar" MaxLength="1000" />
+          <Property Name="bibtex" Type="varchar(max)" />
+          <Property Name="articleno" Type="varchar" MaxLength="250" />
+          <Property Name="numpages" Type="varchar" MaxLength="250" />
+          <Property Name="location" Type="varchar" MaxLength="250" />
+          <Property Name="issue_date" Type="varchar" MaxLength="250" />
+          <Property Name="exclusion_json" Type="varchar" MaxLength="8000" />
+          <Property Name="proximity" Type="int" />
+          <Property Name="rq1_json" Type="varchar" MaxLength="4000" />
+          <Property Name="rq2_json" Type="varchar" MaxLength="4000" />
+          <Property Name="rq3_json" Type="varchar" MaxLength="4000" />
+          <Property Name="rq4_json" Type="varchar" MaxLength="4000" />
+          <Property Name="classification" Type="varchar" MaxLength="4000" />
+          <Property Name="rq1_model_families_json" Type="nvarchar(max)" />
+          <Property Name="rq1_prediction_targets_json" Type="nvarchar(max)" />
+          <Property Name="rq1_prediction_timing_json" Type="nvarchar(max)" />
+          <Property Name="rq1_input_modalities_json" Type="nvarchar(max)" />
+          <Property Name="rq1_study_design" Type="nvarchar" MaxLength="50" />
+          <Property Name="rq1_setting_scope" Type="nvarchar" MaxLength="50" />
+          <Property Name="rq1_setting_country" Type="nvarchar" MaxLength="200" />
+          <Property Name="rq1_sample_size_n" Type="int" />
+          <Property Name="rq2_reported_metrics_json" Type="nvarchar(max)" />
+          <Property Name="rq2_auc" Type="decimal" Precision="4" Scale="3" />
+          <Property Name="rq2_auc_ci_low" Type="decimal" Precision="4" Scale="3" />
+          <Property Name="rq2_auc_ci_high" Type="decimal" Precision="4" Scale="3" />
+          <Property Name="rq2_accuracy" Type="decimal" Precision="5" Scale="3" />
+          <Property Name="rq2_sensitivity" Type="decimal" Precision="5" Scale="3" />
+          <Property Name="rq2_specificity" Type="decimal" Precision="5" Scale="3" />
+          <Property Name="rq2_ppv" Type="decimal" Precision="5" Scale="3" />
+          <Property Name="rq2_npv" Type="decimal" Precision="5" Scale="3" />
+          <Property Name="rq2_f1" Type="decimal" Precision="5" Scale="3" />
+          <Property Name="rq2_brier" Type="decimal" Precision="6" Scale="4" />
+          <Property Name="rq2_hl_p" Type="decimal" Precision="6" Scale="4" />
+          <Property Name="rq2_internal_validation" Type="nvarchar" MaxLength="50" />
+          <Property Name="rq2_comparator_present" Type="bit" />
+          <Property Name="rq2_comparator_type" Type="nvarchar" MaxLength="100" />
+          <Property Name="rq3_repository_mentioned" Type="bit" />
+          <Property Name="rq3_repository_name" Type="nvarchar" MaxLength="200" />
+          <Property Name="rq3_access_type" Type="nvarchar" MaxLength="30" />
+          <Property Name="rq3_data_types_json" Type="nvarchar(max)" />
+          <Property Name="rq4_feature_groups_json" Type="nvarchar(max)" />
+          <Property Name="rq4_top_predictors" Type="nvarchar(max)" />
+          <Property Name="rq5_real_world_design" Type="nvarchar" MaxLength="50" />
+          <Property Name="rq5_real_world_auc" Type="decimal" Precision="4" Scale="3" />
+          <Property Name="rq5_real_world_auc_ci_low" Type="decimal" Precision="4" Scale="3" />
+          <Property Name="rq5_real_world_auc_ci_high" Type="decimal" Precision="4" Scale="3" />
+          <Property Name="rq5_bias_risk_signals_json" Type="nvarchar(max)" />
+          <Property Name="rq6_external_validation" Type="bit" />
+          <Property Name="rq6_external_validation_site" Type="nvarchar" MaxLength="200" />
+          <Property Name="rq6_techniques_compared_json" Type="nvarchar(max)" />
+          <Property Name="rq6_statistical_comparison_json" Type="nvarchar(max)" />
+          <Property Name="rq7_explainability_used" Type="bit" />
+          <Property Name="rq7_explainability_methods_json" Type="nvarchar(max)" />
+          <Property Name="rq7_clinical_use_of_explanations" Type="nvarchar" MaxLength="400" />
+          <Property Name="coding_notes" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="BibEntryAuthor">
+          <Key>
+            <PropertyRef Name="BibEntryAuthorID" />
+          </Key>
+          <Property Name="BibEntryAuthorID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="AuthorID" Type="uniqueidentifier" />
+          <Property Name="EntryID" Type="uniqueidentifier" />
+          <Property Name="sequence" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="BibEntryEvent">
+          <Key>
+            <PropertyRef Name="BibEntryEventID" />
+          </Key>
+          <Property Name="BibEntryEventID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EventID" Type="uniqueidentifier" />
+          <Property Name="EntryID" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="BibEntryReference">
+          <Key>
+            <PropertyRef Name="BibEntryReferenceID" />
+          </Key>
+          <Property Name="BibEntryReferenceID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EntryID1" Type="uniqueidentifier" />
+          <Property Name="EntryID2" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="BibEntrySubject">
+          <Key>
+            <PropertyRef Name="BibEntrySubjectID" />
+          </Key>
+          <Property Name="BibEntrySubjectID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EntryID" Type="uniqueidentifier" />
+          <Property Name="SubjectID" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="EntryTag">
+          <Key>
+            <PropertyRef Name="EntryTagID" />
+          </Key>
+          <Property Name="EntryTagID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EntryID" Type="uniqueidentifier" />
+          <Property Name="TAG" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="1000" />
+          <Property Name="Location" Type="varchar" MaxLength="250" />
+          <Property Name="Acronym" Type="varchar" MaxLength="250" />
+          <Property Name="Generic" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="SubjectID" />
+          </Key>
+          <Property Name="SubjectID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SubjectName" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="taggroup">
+          <Key>
+            <PropertyRef Name="tag" />
+            <PropertyRef Name="taggroup" />
+          </Key>
+          <Property Name="tag" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="taggroup" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Doc_Tmp3.dbo.BibEntry_Doi_VTA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="BibEntry_Doi_VTA">
+          <Key>
+            <PropertyRef Name="EntryID" />
+          </Key>
+          <Property Name="EntryID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="doi" Type="varchar" MaxLength="8000" />
+        </EntityType>
+        <Association Name="FK_BibEntryAuthor_Author">
+          <End Role="Author" Type="Self.Author" Multiplicity="0..1" />
+          <End Role="BibEntryAuthor" Type="Self.BibEntryAuthor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Author">
+              <PropertyRef Name="AuthorID" />
+            </Principal>
+            <Dependent Role="BibEntryAuthor">
+              <PropertyRef Name="AuthorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BibEntryAuthor_BibEntry">
+          <End Role="BibEntry" Type="Self.BibEntry" Multiplicity="0..1" />
+          <End Role="BibEntryAuthor" Type="Self.BibEntryAuthor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BibEntry">
+              <PropertyRef Name="EntryID" />
+            </Principal>
+            <Dependent Role="BibEntryAuthor">
+              <PropertyRef Name="EntryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BibEntryEvent_BibEntry">
+          <End Role="BibEntry" Type="Self.BibEntry" Multiplicity="0..1" />
+          <End Role="BibEntryEvent" Type="Self.BibEntryEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BibEntry">
+              <PropertyRef Name="EntryID" />
+            </Principal>
+            <Dependent Role="BibEntryEvent">
+              <PropertyRef Name="EntryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BibEntryEvent_Event">
+          <End Role="Event" Type="Self.Event" Multiplicity="0..1" />
+          <End Role="BibEntryEvent" Type="Self.BibEntryEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="BibEntryEvent">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BibEntryReference_BibEntry">
+          <End Role="BibEntry" Type="Self.BibEntry" Multiplicity="0..1" />
+          <End Role="BibEntryReference" Type="Self.BibEntryReference" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BibEntry">
+              <PropertyRef Name="EntryID" />
+            </Principal>
+            <Dependent Role="BibEntryReference">
+              <PropertyRef Name="EntryID1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BibEntryReference_BibEntry1">
+          <End Role="BibEntry" Type="Self.BibEntry" Multiplicity="0..1" />
+          <End Role="BibEntryReference" Type="Self.BibEntryReference" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BibEntry">
+              <PropertyRef Name="EntryID" />
+            </Principal>
+            <Dependent Role="BibEntryReference">
+              <PropertyRef Name="EntryID2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BibEntrySubject_BibEntry">
+          <End Role="BibEntry" Type="Self.BibEntry" Multiplicity="0..1" />
+          <End Role="BibEntrySubject" Type="Self.BibEntrySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BibEntry">
+              <PropertyRef Name="EntryID" />
+            </Principal>
+            <Dependent Role="BibEntrySubject">
+              <PropertyRef Name="EntryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BibEntrySubject_Subject">
+          <End Role="Subject" Type="Self.Subject" Multiplicity="0..1" />
+          <End Role="BibEntrySubject" Type="Self.BibEntrySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="BibEntrySubject">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EntryTag_BibEntry">
+          <End Role="BibEntry" Type="Self.BibEntry" Multiplicity="0..1" />
+          <End Role="EntryTag" Type="Self.EntryTag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BibEntry">
+              <PropertyRef Name="EntryID" />
+            </Principal>
+            <Dependent Role="EntryTag">
+              <PropertyRef Name="EntryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="BibEntry_Duplicados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Doc_Tags" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="DOC_TmpModelStoreContainer">
+          <EntitySet Name="Author" EntityType="Self.Author" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BibEntry" EntityType="Self.BibEntry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BibEntryAuthor" EntityType="Self.BibEntryAuthor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BibEntryEvent" EntityType="Self.BibEntryEvent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BibEntryReference" EntityType="Self.BibEntryReference" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BibEntrySubject" EntityType="Self.BibEntrySubject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EntryTag" EntityType="Self.EntryTag" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Event" EntityType="Self.Event" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Subject" EntityType="Self.Subject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="taggroup" EntityType="Self.taggroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BibEntry_Doi_VTA" EntityType="Self.BibEntry_Doi_VTA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [BibEntry_Doi_VTA].[EntryID] AS [EntryID], 
+    [BibEntry_Doi_VTA].[doi] AS [doi]
+    FROM [dbo].[BibEntry_Doi_VTA] AS [BibEntry_Doi_VTA]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_BibEntryAuthor_Author" Association="Self.FK_BibEntryAuthor_Author">
+            <End Role="Author" EntitySet="Author" />
+            <End Role="BibEntryAuthor" EntitySet="BibEntryAuthor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BibEntryAuthor_BibEntry" Association="Self.FK_BibEntryAuthor_BibEntry">
+            <End Role="BibEntry" EntitySet="BibEntry" />
+            <End Role="BibEntryAuthor" EntitySet="BibEntryAuthor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BibEntryEvent_BibEntry" Association="Self.FK_BibEntryEvent_BibEntry">
+            <End Role="BibEntry" EntitySet="BibEntry" />
+            <End Role="BibEntryEvent" EntitySet="BibEntryEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BibEntryEvent_Event" Association="Self.FK_BibEntryEvent_Event">
+            <End Role="Event" EntitySet="Event" />
+            <End Role="BibEntryEvent" EntitySet="BibEntryEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BibEntryReference_BibEntry" Association="Self.FK_BibEntryReference_BibEntry">
+            <End Role="BibEntry" EntitySet="BibEntry" />
+            <End Role="BibEntryReference" EntitySet="BibEntryReference" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BibEntryReference_BibEntry1" Association="Self.FK_BibEntryReference_BibEntry1">
+            <End Role="BibEntry" EntitySet="BibEntry" />
+            <End Role="BibEntryReference" EntitySet="BibEntryReference" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BibEntrySubject_BibEntry" Association="Self.FK_BibEntrySubject_BibEntry">
+            <End Role="BibEntry" EntitySet="BibEntry" />
+            <End Role="BibEntrySubject" EntitySet="BibEntrySubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BibEntrySubject_Subject" Association="Self.FK_BibEntrySubject_Subject">
+            <End Role="Subject" EntitySet="Subject" />
+            <End Role="BibEntrySubject" EntitySet="BibEntrySubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EntryTag_BibEntry" Association="Self.FK_EntryTag_BibEntry">
+            <End Role="BibEntry" EntitySet="BibEntry" />
+            <End Role="EntryTag" EntitySet="EntryTag" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DOC_TmpModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DOC_TmpEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="EntryTag" EntityType="DOC_TmpModel.EntryTag" />
+          <EntitySet Name="taggroup" EntityType="DOC_TmpModel.taggroup" />
+          <FunctionImport Name="Doc_Tags" ReturnType="Collection(DOC_TmpModel.Doc_Tags_Result)" />
+          <EntitySet Name="Author" EntityType="DOC_TmpModel.Author" />
+          <EntitySet Name="BibEntryAuthor" EntityType="DOC_TmpModel.BibEntryAuthor" />
+          <AssociationSet Name="FK_BibEntryAuthor_Author" Association="DOC_TmpModel.FK_BibEntryAuthor_Author">
+            <End Role="Author" EntitySet="Author" />
+            <End Role="BibEntryAuthor" EntitySet="BibEntryAuthor" />
+          </AssociationSet>
+          <EntitySet Name="BibEntryEvent" EntityType="DOC_TmpModel.BibEntryEvent" />
+          <EntitySet Name="BibEntryReference" EntityType="DOC_TmpModel.BibEntryReference" />
+          <EntitySet Name="Event" EntityType="DOC_TmpModel.Event" />
+          <AssociationSet Name="FK_BibEntryEvent_Event" Association="DOC_TmpModel.FK_BibEntryEvent_Event">
+            <End Role="Event" EntitySet="Event" />
+            <End Role="BibEntryEvent" EntitySet="BibEntryEvent" />
+          </AssociationSet>
+          <EntitySet Name="BibEntrySubject" EntityType="DOC_TmpModel.BibEntrySubject" />
+          <EntitySet Name="Subject" EntityType="DOC_TmpModel.Subject" />
+          <AssociationSet Name="FK_BibEntrySubject_Subject" Association="DOC_TmpModel.FK_BibEntrySubject_Subject">
+            <End Role="Subject" EntitySet="Subject" />
+            <End Role="BibEntrySubject" EntitySet="BibEntrySubject" />
+          </AssociationSet>
+          <EntitySet Name="BibEntry" EntityType="DOC_TmpModel.BibEntry" />
+          <AssociationSet Name="FK_BibEntryAuthor_BibEntry" Association="DOC_TmpModel.FK_BibEntryAuthor_BibEntry">
+            <End Role="BibEntry" EntitySet="BibEntry" />
+            <End Role="BibEntryAuthor" EntitySet="BibEntryAuthor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BibEntryEvent_BibEntry" Association="DOC_TmpModel.FK_BibEntryEvent_BibEntry">
+            <End Role="BibEntry" EntitySet="BibEntry" />
+            <End Role="BibEntryEvent" EntitySet="BibEntryEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BibEntryReference_BibEntry" Association="DOC_TmpModel.FK_BibEntryReference_BibEntry">
+            <End Role="BibEntry" EntitySet="BibEntry" />
+            <End Role="BibEntryReference" EntitySet="BibEntryReference" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BibEntryReference_BibEntry1" Association="DOC_TmpModel.FK_BibEntryReference_BibEntry1">
+            <End Role="BibEntry" EntitySet="BibEntry" />
+            <End Role="BibEntryReference" EntitySet="BibEntryReference" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BibEntrySubject_BibEntry" Association="DOC_TmpModel.FK_BibEntrySubject_BibEntry">
+            <End Role="BibEntry" EntitySet="BibEntry" />
+            <End Role="BibEntrySubject" EntitySet="BibEntrySubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EntryTag_BibEntry" Association="DOC_TmpModel.FK_EntryTag_BibEntry">
+            <End Role="BibEntry" EntitySet="BibEntry" />
+            <End Role="EntryTag" EntitySet="EntryTag" />
+          </AssociationSet>
+          <FunctionImport Name="BibEntry_Duplicados" />
+          <EntitySet Name="BibEntry_Doi_VTA" EntityType="DOC_TmpModel.BibEntry_Doi_VTA" />
+        </EntityContainer>
+        <EntityType Name="EntryTag">
+          <Key>
+            <PropertyRef Name="EntryTagID" />
+          </Key>
+          <Property Name="EntryTagID" Type="Guid" Nullable="false" />
+          <Property Name="EntryID" Type="Guid" />
+          <Property Name="TAG" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BibEntry" Relationship="DOC_TmpModel.FK_EntryTag_BibEntry" FromRole="EntryTag" ToRole="BibEntry" />
+        </EntityType>
+        <EntityType Name="taggroup">
+          <Key>
+            <PropertyRef Name="tag" />
+            <PropertyRef Name="taggroup1" />
+          </Key>
+          <Property Name="tag" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="taggroup1" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="Doc_Tags_Result">
+          <Property Type="String" Name="tagv" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="tagw" Nullable="false" MaxLength="200" />
+          <Property Type="Int32" Name="cty" Nullable="true" />
+          <Property Type="Int32" Name="hsh" Nullable="true" />
+          <Property Type="Int64" Name="num" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="Author">
+          <Key>
+            <PropertyRef Name="AuthorID" />
+          </Key>
+          <Property Name="AuthorID" Type="Guid" Nullable="false" />
+          <Property Name="given" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="family" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BibEntryAuthor" Relationship="DOC_TmpModel.FK_BibEntryAuthor_Author" FromRole="Author" ToRole="BibEntryAuthor" />
+        </EntityType>
+        <EntityType Name="BibEntryAuthor">
+          <Key>
+            <PropertyRef Name="BibEntryAuthorID" />
+          </Key>
+          <Property Name="BibEntryAuthorID" Type="Guid" Nullable="false" />
+          <Property Name="AuthorID" Type="Guid" />
+          <Property Name="EntryID" Type="Guid" />
+          <Property Name="sequence" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Author" Relationship="DOC_TmpModel.FK_BibEntryAuthor_Author" FromRole="BibEntryAuthor" ToRole="Author" />
+          <NavigationProperty Name="BibEntry" Relationship="DOC_TmpModel.FK_BibEntryAuthor_BibEntry" FromRole="BibEntryAuthor" ToRole="BibEntry" />
+        </EntityType>
+        <Association Name="FK_BibEntryAuthor_Author">
+          <End Type="DOC_TmpModel.Author" Role="Author" Multiplicity="0..1" />
+          <End Type="DOC_TmpModel.BibEntryAuthor" Role="BibEntryAuthor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Author">
+              <PropertyRef Name="AuthorID" />
+            </Principal>
+            <Dependent Role="BibEntryAuthor">
+              <PropertyRef Name="AuthorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="BibEntryEvent">
+          <Key>
+            <PropertyRef Name="BibEntryEventID" />
+          </Key>
+          <Property Name="BibEntryEventID" Type="Guid" Nullable="false" />
+          <Property Name="EventID" Type="Guid" />
+          <Property Name="EntryID" Type="Guid" />
+          <NavigationProperty Name="Event" Relationship="DOC_TmpModel.FK_BibEntryEvent_Event" FromRole="BibEntryEvent" ToRole="Event" />
+          <NavigationProperty Name="BibEntry" Relationship="DOC_TmpModel.FK_BibEntryEvent_BibEntry" FromRole="BibEntryEvent" ToRole="BibEntry" />
+        </EntityType>
+        <EntityType Name="BibEntryReference">
+          <Key>
+            <PropertyRef Name="BibEntryReferenceID" />
+          </Key>
+          <Property Name="BibEntryReferenceID" Type="Guid" Nullable="false" />
+          <Property Name="EntryID1" Type="Guid" />
+          <Property Name="EntryID2" Type="Guid" />
+          <NavigationProperty Name="BibEntry" Relationship="DOC_TmpModel.FK_BibEntryReference_BibEntry" FromRole="BibEntryReference" ToRole="BibEntry" />
+          <NavigationProperty Name="BibEntry1" Relationship="DOC_TmpModel.FK_BibEntryReference_BibEntry1" FromRole="BibEntryReference" ToRole="BibEntry" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Acronym" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BibEntryEvent" Relationship="DOC_TmpModel.FK_BibEntryEvent_Event" FromRole="Event" ToRole="BibEntryEvent" />
+          <Property Name="Generic" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_BibEntryEvent_Event">
+          <End Type="DOC_TmpModel.Event" Role="Event" Multiplicity="0..1" />
+          <End Type="DOC_TmpModel.BibEntryEvent" Role="BibEntryEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="BibEntryEvent">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="BibEntrySubject">
+          <Key>
+            <PropertyRef Name="BibEntrySubjectID" />
+          </Key>
+          <Property Name="BibEntrySubjectID" Type="Guid" Nullable="false" />
+          <Property Name="EntryID" Type="Guid" />
+          <Property Name="SubjectID" Type="Guid" />
+          <NavigationProperty Name="Subject" Relationship="DOC_TmpModel.FK_BibEntrySubject_Subject" FromRole="BibEntrySubject" ToRole="Subject" />
+          <NavigationProperty Name="BibEntry" Relationship="DOC_TmpModel.FK_BibEntrySubject_BibEntry" FromRole="BibEntrySubject" ToRole="BibEntry" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="SubjectID" />
+          </Key>
+          <Property Name="SubjectID" Type="Guid" Nullable="false" />
+          <Property Name="SubjectName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BibEntrySubject" Relationship="DOC_TmpModel.FK_BibEntrySubject_Subject" FromRole="Subject" ToRole="BibEntrySubject" />
+        </EntityType>
+        <Association Name="FK_BibEntrySubject_Subject">
+          <End Type="DOC_TmpModel.Subject" Role="Subject" Multiplicity="0..1" />
+          <End Type="DOC_TmpModel.BibEntrySubject" Role="BibEntrySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="SubjectID" />
+            </Principal>
+            <Dependent Role="BibEntrySubject">
+              <PropertyRef Name="SubjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="BibEntry">
+          <Key>
+            <PropertyRef Name="EntryID" />
+          </Key>
+          <Property Name="EntryID" Type="Guid" Nullable="false" />
+          <Property Name="EntryType" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="EntryKey" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="abstract" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="annote" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="booktitle" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="ISBN" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="publisher" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="title" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="url" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="year" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="doi" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="ISSN" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="volume" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="author" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="keywords" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="pages" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="month" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="journal" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="number" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="editor" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="archivePrefix" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="arxivId" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="eprint" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="series" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="db" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="edition" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="day" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="note" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="EntryStatus" Type="Int32" />
+          <Property Name="jsondata" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="indexed" Type="DateTime" Precision="3" />
+          <Property Name="publishedprint" Type="DateTime" Precision="3" />
+          <Property Name="articletype" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="created" Type="DateTime" Precision="3" />
+          <Property Name="score" Type="Int32" />
+          <Property Name="issued" Type="DateTime" Precision="3" />
+          <Property Name="published" Type="DateTime" Precision="3" />
+          <Property Name="isreferencedbycount" Type="Int32" />
+          <Property Name="cISSN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="cISBN" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="containertitle" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="bibtex" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="articleno" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="numpages" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="location" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="issue_date" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="BibEntryAuthor" Relationship="DOC_TmpModel.FK_BibEntryAuthor_BibEntry" FromRole="BibEntry" ToRole="BibEntryAuthor" />
+          <NavigationProperty Name="BibEntryEvent" Relationship="DOC_TmpModel.FK_BibEntryEvent_BibEntry" FromRole="BibEntry" ToRole="BibEntryEvent" />
+          <NavigationProperty Name="BibEntryReference" Relationship="DOC_TmpModel.FK_BibEntryReference_BibEntry" FromRole="BibEntry" ToRole="BibEntryReference" />
+          <NavigationProperty Name="BibEntryReference1" Relationship="DOC_TmpModel.FK_BibEntryReference_BibEntry1" FromRole="BibEntry" ToRole="BibEntryReference" />
+          <NavigationProperty Name="BibEntrySubject" Relationship="DOC_TmpModel.FK_BibEntrySubject_BibEntry" FromRole="BibEntry" ToRole="BibEntrySubject" />
+          <NavigationProperty Name="EntryTag" Relationship="DOC_TmpModel.FK_EntryTag_BibEntry" FromRole="BibEntry" ToRole="EntryTag" />
+          <Property Name="exclusion_json" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="proximity" Type="Int32" />
+          <Property Name="rq1_json" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="rq2_json" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="rq3_json" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="rq4_json" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="classification" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="rq1_model_families_json" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rq1_prediction_targets_json" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rq1_prediction_timing_json" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rq1_input_modalities_json" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rq1_study_design" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="rq1_setting_scope" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="rq1_setting_country" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="rq1_sample_size_n" Type="Int32" />
+          <Property Name="rq2_reported_metrics_json" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rq2_auc" Type="Decimal" Precision="4" Scale="3" />
+          <Property Name="rq2_auc_ci_low" Type="Decimal" Precision="4" Scale="3" />
+          <Property Name="rq2_auc_ci_high" Type="Decimal" Precision="4" Scale="3" />
+          <Property Name="rq2_accuracy" Type="Decimal" Precision="5" Scale="3" />
+          <Property Name="rq2_sensitivity" Type="Decimal" Precision="5" Scale="3" />
+          <Property Name="rq2_specificity" Type="Decimal" Precision="5" Scale="3" />
+          <Property Name="rq2_ppv" Type="Decimal" Precision="5" Scale="3" />
+          <Property Name="rq2_npv" Type="Decimal" Precision="5" Scale="3" />
+          <Property Name="rq2_f1" Type="Decimal" Precision="5" Scale="3" />
+          <Property Name="rq2_brier" Type="Decimal" Precision="6" Scale="4" />
+          <Property Name="rq2_hl_p" Type="Decimal" Precision="6" Scale="4" />
+          <Property Name="rq2_internal_validation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="rq2_comparator_present" Type="Boolean" />
+          <Property Name="rq2_comparator_type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="rq3_repository_mentioned" Type="Boolean" />
+          <Property Name="rq3_repository_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="rq3_access_type" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="rq3_data_types_json" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rq4_feature_groups_json" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rq4_top_predictors" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rq5_real_world_design" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="rq5_real_world_auc" Type="Decimal" Precision="4" Scale="3" />
+          <Property Name="rq5_real_world_auc_ci_low" Type="Decimal" Precision="4" Scale="3" />
+          <Property Name="rq5_real_world_auc_ci_high" Type="Decimal" Precision="4" Scale="3" />
+          <Property Name="rq5_bias_risk_signals_json" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rq6_external_validation" Type="Boolean" />
+          <Property Name="rq6_external_validation_site" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="rq6_techniques_compared_json" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rq6_statistical_comparison_json" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rq7_explainability_used" Type="Boolean" />
+          <Property Name="rq7_explainability_methods_json" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="rq7_clinical_use_of_explanations" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="coding_notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_BibEntryAuthor_BibEntry">
+          <End Type="DOC_TmpModel.BibEntry" Role="BibEntry" Multiplicity="0..1" />
+          <End Type="DOC_TmpModel.BibEntryAuthor" Role="BibEntryAuthor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BibEntry">
+              <PropertyRef Name="EntryID" />
+            </Principal>
+            <Dependent Role="BibEntryAuthor">
+              <PropertyRef Name="EntryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BibEntryEvent_BibEntry">
+          <End Type="DOC_TmpModel.BibEntry" Role="BibEntry" Multiplicity="0..1" />
+          <End Type="DOC_TmpModel.BibEntryEvent" Role="BibEntryEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BibEntry">
+              <PropertyRef Name="EntryID" />
+            </Principal>
+            <Dependent Role="BibEntryEvent">
+              <PropertyRef Name="EntryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BibEntryReference_BibEntry">
+          <End Type="DOC_TmpModel.BibEntry" Role="BibEntry" Multiplicity="0..1" />
+          <End Type="DOC_TmpModel.BibEntryReference" Role="BibEntryReference" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BibEntry">
+              <PropertyRef Name="EntryID" />
+            </Principal>
+            <Dependent Role="BibEntryReference">
+              <PropertyRef Name="EntryID1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BibEntryReference_BibEntry1">
+          <End Type="DOC_TmpModel.BibEntry" Role="BibEntry" Multiplicity="0..1" />
+          <End Type="DOC_TmpModel.BibEntryReference" Role="BibEntryReference" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BibEntry">
+              <PropertyRef Name="EntryID" />
+            </Principal>
+            <Dependent Role="BibEntryReference">
+              <PropertyRef Name="EntryID2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BibEntrySubject_BibEntry">
+          <End Type="DOC_TmpModel.BibEntry" Role="BibEntry" Multiplicity="0..1" />
+          <End Type="DOC_TmpModel.BibEntrySubject" Role="BibEntrySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BibEntry">
+              <PropertyRef Name="EntryID" />
+            </Principal>
+            <Dependent Role="BibEntrySubject">
+              <PropertyRef Name="EntryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EntryTag_BibEntry">
+          <End Type="DOC_TmpModel.BibEntry" Role="BibEntry" Multiplicity="0..1" />
+          <End Type="DOC_TmpModel.EntryTag" Role="EntryTag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BibEntry">
+              <PropertyRef Name="EntryID" />
+            </Principal>
+            <Dependent Role="EntryTag">
+              <PropertyRef Name="EntryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="BibEntry_Doi_VTA">
+          <Key>
+            <PropertyRef Name="EntryID" />
+          </Key>
+          <Property Name="EntryID" Type="Guid" Nullable="false" />
+          <Property Name="doi" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DOC_TmpModelStoreContainer" CdmEntityContainer="DOC_TmpEntities" >
+          <EntitySetMapping Name="EntryTag">
+            <EntityTypeMapping TypeName="DOC_TmpModel.EntryTag">
+              <MappingFragment StoreEntitySet="EntryTag">
+                <ScalarProperty Name="TAG" ColumnName="TAG" />
+                <ScalarProperty Name="EntryID" ColumnName="EntryID" />
+                <ScalarProperty Name="EntryTagID" ColumnName="EntryTagID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="taggroup">
+            <EntityTypeMapping TypeName="DOC_TmpModel.taggroup">
+              <MappingFragment StoreEntitySet="taggroup">
+                <ScalarProperty Name="taggroup1" ColumnName="taggroup" />
+                <ScalarProperty Name="tag" ColumnName="tag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Doc_Tags" FunctionName="DOC_TmpModel.Store.Doc_Tags">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DOC_TmpModel.Doc_Tags_Result">
+                <ScalarProperty Name="tagv" ColumnName="tagv" />
+                <ScalarProperty Name="tagw" ColumnName="tagw" />
+                <ScalarProperty Name="cty" ColumnName="cty" />
+                <ScalarProperty Name="hsh" ColumnName="hsh" />
+                <ScalarProperty Name="num" ColumnName="num" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Author">
+            <EntityTypeMapping TypeName="DOC_TmpModel.Author">
+              <MappingFragment StoreEntitySet="Author">
+                <ScalarProperty Name="family" ColumnName="family" />
+                <ScalarProperty Name="given" ColumnName="given" />
+                <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BibEntryAuthor">
+            <EntityTypeMapping TypeName="DOC_TmpModel.BibEntryAuthor">
+              <MappingFragment StoreEntitySet="BibEntryAuthor">
+                <ScalarProperty Name="sequence" ColumnName="sequence" />
+                <ScalarProperty Name="EntryID" ColumnName="EntryID" />
+                <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+                <ScalarProperty Name="BibEntryAuthorID" ColumnName="BibEntryAuthorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BibEntryEvent">
+            <EntityTypeMapping TypeName="DOC_TmpModel.BibEntryEvent">
+              <MappingFragment StoreEntitySet="BibEntryEvent">
+                <ScalarProperty Name="EntryID" ColumnName="EntryID" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="BibEntryEventID" ColumnName="BibEntryEventID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BibEntryReference">
+            <EntityTypeMapping TypeName="DOC_TmpModel.BibEntryReference">
+              <MappingFragment StoreEntitySet="BibEntryReference">
+                <ScalarProperty Name="EntryID2" ColumnName="EntryID2" />
+                <ScalarProperty Name="EntryID1" ColumnName="EntryID1" />
+                <ScalarProperty Name="BibEntryReferenceID" ColumnName="BibEntryReferenceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Event">
+            <EntityTypeMapping TypeName="DOC_TmpModel.Event">
+              <MappingFragment StoreEntitySet="Event">
+                <ScalarProperty Name="Generic" ColumnName="Generic" />
+                <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BibEntrySubject">
+            <EntityTypeMapping TypeName="DOC_TmpModel.BibEntrySubject">
+              <MappingFragment StoreEntitySet="BibEntrySubject">
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+                <ScalarProperty Name="EntryID" ColumnName="EntryID" />
+                <ScalarProperty Name="BibEntrySubjectID" ColumnName="BibEntrySubjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subject">
+            <EntityTypeMapping TypeName="DOC_TmpModel.Subject">
+              <MappingFragment StoreEntitySet="Subject">
+                <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+                <ScalarProperty Name="SubjectID" ColumnName="SubjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BibEntry">
+            <EntityTypeMapping TypeName="DOC_TmpModel.BibEntry">
+              <MappingFragment StoreEntitySet="BibEntry">
+                <ScalarProperty Name="coding_notes" ColumnName="coding_notes" />
+                <ScalarProperty Name="rq7_clinical_use_of_explanations" ColumnName="rq7_clinical_use_of_explanations" />
+                <ScalarProperty Name="rq7_explainability_methods_json" ColumnName="rq7_explainability_methods_json" />
+                <ScalarProperty Name="rq7_explainability_used" ColumnName="rq7_explainability_used" />
+                <ScalarProperty Name="rq6_statistical_comparison_json" ColumnName="rq6_statistical_comparison_json" />
+                <ScalarProperty Name="rq6_techniques_compared_json" ColumnName="rq6_techniques_compared_json" />
+                <ScalarProperty Name="rq6_external_validation_site" ColumnName="rq6_external_validation_site" />
+                <ScalarProperty Name="rq6_external_validation" ColumnName="rq6_external_validation" />
+                <ScalarProperty Name="rq5_bias_risk_signals_json" ColumnName="rq5_bias_risk_signals_json" />
+                <ScalarProperty Name="rq5_real_world_auc_ci_high" ColumnName="rq5_real_world_auc_ci_high" />
+                <ScalarProperty Name="rq5_real_world_auc_ci_low" ColumnName="rq5_real_world_auc_ci_low" />
+                <ScalarProperty Name="rq5_real_world_auc" ColumnName="rq5_real_world_auc" />
+                <ScalarProperty Name="rq5_real_world_design" ColumnName="rq5_real_world_design" />
+                <ScalarProperty Name="rq4_top_predictors" ColumnName="rq4_top_predictors" />
+                <ScalarProperty Name="rq4_feature_groups_json" ColumnName="rq4_feature_groups_json" />
+                <ScalarProperty Name="rq3_data_types_json" ColumnName="rq3_data_types_json" />
+                <ScalarProperty Name="rq3_access_type" ColumnName="rq3_access_type" />
+                <ScalarProperty Name="rq3_repository_name" ColumnName="rq3_repository_name" />
+                <ScalarProperty Name="rq3_repository_mentioned" ColumnName="rq3_repository_mentioned" />
+                <ScalarProperty Name="rq2_comparator_type" ColumnName="rq2_comparator_type" />
+                <ScalarProperty Name="rq2_comparator_present" ColumnName="rq2_comparator_present" />
+                <ScalarProperty Name="rq2_internal_validation" ColumnName="rq2_internal_validation" />
+                <ScalarProperty Name="rq2_hl_p" ColumnName="rq2_hl_p" />
+                <ScalarProperty Name="rq2_brier" ColumnName="rq2_brier" />
+                <ScalarProperty Name="rq2_f1" ColumnName="rq2_f1" />
+                <ScalarProperty Name="rq2_npv" ColumnName="rq2_npv" />
+                <ScalarProperty Name="rq2_ppv" ColumnName="rq2_ppv" />
+                <ScalarProperty Name="rq2_specificity" ColumnName="rq2_specificity" />
+                <ScalarProperty Name="rq2_sensitivity" ColumnName="rq2_sensitivity" />
+                <ScalarProperty Name="rq2_accuracy" ColumnName="rq2_accuracy" />
+                <ScalarProperty Name="rq2_auc_ci_high" ColumnName="rq2_auc_ci_high" />
+                <ScalarProperty Name="rq2_auc_ci_low" ColumnName="rq2_auc_ci_low" />
+                <ScalarProperty Name="rq2_auc" ColumnName="rq2_auc" />
+                <ScalarProperty Name="rq2_reported_metrics_json" ColumnName="rq2_reported_metrics_json" />
+                <ScalarProperty Name="rq1_sample_size_n" ColumnName="rq1_sample_size_n" />
+                <ScalarProperty Name="rq1_setting_country" ColumnName="rq1_setting_country" />
+                <ScalarProperty Name="rq1_setting_scope" ColumnName="rq1_setting_scope" />
+                <ScalarProperty Name="rq1_study_design" ColumnName="rq1_study_design" />
+                <ScalarProperty Name="rq1_input_modalities_json" ColumnName="rq1_input_modalities_json" />
+                <ScalarProperty Name="rq1_prediction_timing_json" ColumnName="rq1_prediction_timing_json" />
+                <ScalarProperty Name="rq1_prediction_targets_json" ColumnName="rq1_prediction_targets_json" />
+                <ScalarProperty Name="rq1_model_families_json" ColumnName="rq1_model_families_json" />
+                <ScalarProperty Name="classification" ColumnName="classification" />
+                <ScalarProperty Name="rq4_json" ColumnName="rq4_json" />
+                <ScalarProperty Name="rq3_json" ColumnName="rq3_json" />
+                <ScalarProperty Name="rq2_json" ColumnName="rq2_json" />
+                <ScalarProperty Name="rq1_json" ColumnName="rq1_json" />
+                <ScalarProperty Name="proximity" ColumnName="proximity" />
+                <ScalarProperty Name="exclusion_json" ColumnName="exclusion_json" />
+                <ScalarProperty Name="issue_date" ColumnName="issue_date" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="numpages" ColumnName="numpages" />
+                <ScalarProperty Name="articleno" ColumnName="articleno" />
+                <ScalarProperty Name="bibtex" ColumnName="bibtex" />
+                <ScalarProperty Name="containertitle" ColumnName="containertitle" />
+                <ScalarProperty Name="cISBN" ColumnName="cISBN" />
+                <ScalarProperty Name="cISSN" ColumnName="cISSN" />
+                <ScalarProperty Name="isreferencedbycount" ColumnName="isreferencedbycount" />
+                <ScalarProperty Name="published" ColumnName="published" />
+                <ScalarProperty Name="issued" ColumnName="issued" />
+                <ScalarProperty Name="score" ColumnName="score" />
+                <ScalarProperty Name="created" ColumnName="created" />
+                <ScalarProperty Name="articletype" ColumnName="articletype" />
+                <ScalarProperty Name="publishedprint" ColumnName="publishedprint" />
+                <ScalarProperty Name="indexed" ColumnName="indexed" />
+                <ScalarProperty Name="jsondata" ColumnName="jsondata" />
+                <ScalarProperty Name="EntryStatus" ColumnName="EntryStatus" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="day" ColumnName="day" />
+                <ScalarProperty Name="edition" ColumnName="edition" />
+                <ScalarProperty Name="db" ColumnName="db" />
+                <ScalarProperty Name="series" ColumnName="series" />
+                <ScalarProperty Name="eprint" ColumnName="eprint" />
+                <ScalarProperty Name="arxivId" ColumnName="arxivId" />
+                <ScalarProperty Name="archivePrefix" ColumnName="archivePrefix" />
+                <ScalarProperty Name="editor" ColumnName="editor" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="number" ColumnName="number" />
+                <ScalarProperty Name="journal" ColumnName="journal" />
+                <ScalarProperty Name="month" ColumnName="month" />
+                <ScalarProperty Name="pages" ColumnName="pages" />
+                <ScalarProperty Name="keywords" ColumnName="keywords" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="volume" ColumnName="volume" />
+                <ScalarProperty Name="ISSN" ColumnName="ISSN" />
+                <ScalarProperty Name="doi" ColumnName="doi" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="publisher" ColumnName="publisher" />
+                <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+                <ScalarProperty Name="booktitle" ColumnName="booktitle" />
+                <ScalarProperty Name="annote" ColumnName="annote" />
+                <ScalarProperty Name="abstract" ColumnName="abstract" />
+                <ScalarProperty Name="EntryKey" ColumnName="EntryKey" />
+                <ScalarProperty Name="EntryType" ColumnName="EntryType" />
+                <ScalarProperty Name="EntryID" ColumnName="EntryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="BibEntry_Duplicados" FunctionName="DOC_TmpModel.Store.BibEntry_Duplicados" />
+          <EntitySetMapping Name="BibEntry_Doi_VTA">
+            <EntityTypeMapping TypeName="DOC_TmpModel.BibEntry_Doi_VTA">
+              <MappingFragment StoreEntitySet="BibEntry_Doi_VTA">
+                <ScalarProperty Name="doi" ColumnName="doi" />
+                <ScalarProperty Name="EntryID" ColumnName="EntryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

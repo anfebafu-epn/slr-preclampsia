@@ -1,0 +1,29 @@
+﻿wang2023fgr;0,851;NULL;NULL;Linear/GLM;none/NR;NULL
+banaei_2025;0,85;NULL;NULL;Linear/GLM;none/NR;NULL
+devi2023;0,96;NULL;NULL;Tree-based;none/NR;"[""PE""]"
+mari__2020;0,79;0,75;0,83;Linear/GLM;k-fold CV;"[""PE"",""early-onset PE""]"
+gu_2025;0,729;NULL;NULL;NULL;none/NR;NULL
+escobar_2021;0,786;NULL;NULL;Linear/GLM;train/test split;NULL
+zheutlin_2021;0,71;0,69;0,72;Tree-based;train/test split;NULL
+tiruneh_2024;0,84;0,82;0,86;Linear/GLM;train/test split;"[""PE""]"
+chemhaka_2025;0,815;NULL;NULL;Linear/GLM;none/NR;NULL
+gil2024;0,846;NULL;NULL;Neural Network;none/NR;"[""PE""]"
+butler_2024;0,85;0,77;0,93;Neural Network;train/test split;"[""PE"",""early-onset PE""]"
+liu2022;0,86;0,8;0,92;Linear/GLM;k-fold CV;"[""PE""]"
+montgomery_csob_n_2024;0,8;0,76;0,84;Tree-based;k-fold CV;NULL
+ding_2024;0,788;NULL;NULL;Linear/GLM;none/NR;NULL
+wang_2024;0,84;NULL;NULL;Tree-based;none/NR;NULL
+loftness2023;0,88;NULL;NULL;SVM;k-fold CV;"[""early-onset PE""]"
+li_2021;0,955;NULL;NULL;Linear/GLM;none/NR;"[""PE""]"
+schmidt_2022;0,82;NULL;NULL;Tree-based;k-fold CV;NULL
+lee_2022;0,81;NULL;NULL;Linear/GLM;train/test split;"[""HDP""]"
+salinas_2025;0,89;NULL;NULL;Tree-based;none/NR;"[""PE""]"
+chen_2024;0,89;0,88;0,9;Tree-based;train/test split;NULL
+andreychenko_2023;0,858;0,827;0,89;Linear/GLM;none/NR;"[""PE"",""early-onset PE""]"
+mari__2022;0,88;0,76;0,99;NULL;k-fold CV;"[""PE""]"
+zambrano_santos_2025;0,94;NULL;NULL;Linear/GLM;none/NR;"[""PE""]"
+khalil_2024;0,8;NULL;NULL;Linear/GLM;k-fold CV;"[""PE"",""early-onset PE""]"
+malakooti_2025;0,87;NULL;NULL;Tree-based;none/NR;NULL
+addad_2023;0,966;NULL;NULL;Tree-based;none/NR;NULL
+hoffman_2021;0,81;NULL;NULL;NULL;train/test split;"[""HDP""]"
+roque2024;0,976;NULL;NULL;SVM;none/NR;"[""PE""]"

@@ -1,0 +1,10 @@
+delete EntryTag
+delete BibEntryReference
+delete BibEntrySubject
+delete BibEntryEvent
+delete BibEntryAuthor
+delete BibEntry
+delete Event
+delete Subject
+delete taggroup
+delete Author
